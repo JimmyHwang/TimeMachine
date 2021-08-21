@@ -282,9 +282,12 @@ class STORAGE_CLASS:
       dest = os.path.join(self.ConfigData["Folder"], trk["Output"])
       print("[%s] -> [%s]" % (src, dest))
       if "Tags" in trk:
-        for key in trk["Tags"]:
-          value = trk["Tags"][key]
-          print("[%s] -> [%s]" % (key, value))
+        sort_orders = sorted(trk["Tags"].items(), key=lambda x: x[1])
+        for i in sort_orders:
+          print("%16s = %s" % (i[0], i[1]))        
+        # for key in trk["Tags"]:
+          # value = trk["Tags"][key]
+          # print("[%s] -> [%s]" % (key, value)) 
           
   def Push(self, tag):
     index = 0
