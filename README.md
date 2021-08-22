@@ -1,6 +1,6 @@
 # TimeMachine
 
-This script provides some advanced functions for backup/restore management through tags and multiple folders. It uses the https://github.com/laurent22/rsync-time-backup mechanism at the bottom.
+This script provides some advanced functions for backup/restore management through tags and multiple folders. It based on the https://github.com/laurent22/rsync-time-backup mechanism to implement.
 
 # LICENSE
 The MIT License (MIT)
