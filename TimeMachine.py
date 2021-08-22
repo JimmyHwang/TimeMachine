@@ -12,15 +12,10 @@ import pathlib
 import glob
 import hashlib
 import base64
-from Crypto.Cipher import AES
-from Crypto import Random
-from Crypto.Util import Padding
 
-Host = "127.0.0.1"
 VerboseFlag = False
 ConfigObj = False
 ClearFlag = False
-BuildFolder = "./"
 
 #------------------------------------------------------------------------------
 # Common Functions
@@ -138,17 +133,6 @@ def GetLineByTag(fn, tag):
       break
   return result
     
-#------------------------------------------------------------------------------
-# Other Functions
-#------------------------------------------------------------------------------    
-def PushIndentSpace():
-  global IndentSpace
-  IndentSpace = IndentSpace + ".."
-
-def PopIndentSpace():
-  global IndentSpace
-  IndentSpace = IndentSpace[0:-2]
-  
 #------------------------------------------------------------------------------
 #
 #------------------------------------------------------------------------------
